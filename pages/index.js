@@ -3,12 +3,12 @@ import React from 'react'
 import { client } from '@/lib/client'
 import { Carousel } from '@/components/Carousel'
 
-const Home = ({heroBanner}) => {
+const Home = ({heroBanner, carouselData}) => {
   return (
     <div className='homepage-container'>
       <HeroBanner bannerData={heroBanner[0]}/>
       
-      <Carousel/>  
+      <Carousel carousel={carouselData}/>  
    
 
     </div>
@@ -20,10 +20,12 @@ export  const getServerSideProps = async () => {
   const heroBannerQuery = '*[_type == "herobanner"]';
   const heroBanner = await client.fetch(heroBannerQuery);
 
-  console.log(heroBanner[0]);
+  const carouselQuery = '*[_type == "carousel"] | order(name asc)';
+  const carouselData = await client.fetch(carouselQuery);
+
 
   return {
-    props: {heroBanner}
+    props: {heroBanner, carouselData}
   }
 }
 
