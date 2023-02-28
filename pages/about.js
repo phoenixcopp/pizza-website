@@ -22,6 +22,7 @@ export  const getServerSideProps = async () => {
   const aboutData = await client.fetch(aboutQuery);
 
 
+
   return {
     props: {aboutData}
   }

@@ -74,6 +74,37 @@ background-color: #1e2327;
   height: auto;
 }
 
+.item-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item {
+  margin-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-name {
+  font-size: 1.5vw;
+  font-weight: 600;
+  font-variant: small-caps;
+}
+
+.item-desc {
+  font-size: 1vw;
+
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
 
 
 /* NAVBAR STYLING */
@@ -82,6 +113,7 @@ background-color: #1e2327;
   flex-direction: row;
   justify-content: space-between;
   padding: 1%;
+  padding-right: 3%;
   padding-top: 3%;
   background-color: rgb(27, 25, 25);
   align-items: flex-end;
@@ -120,44 +152,6 @@ a.active {
 
 
 
-/* PRODUCT STYLINH*/
-.product-container {
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5%;
-  margin-bottom: 5%;
-  border: 4px;
-  border-style: solid;
-  border-color: white;
-  border-radius: 15px;
-  padding: 2%;
-  background-color: #1e2327;
-}
-
-.product-image {
-  border: 4px;
-  border-style: solid;
-  border-color: white;
-  border-radius: 15px;
-}
-
-.item-name {
-  font-size: 20px;
-  margin-bottom: 2%;
-  font-weight: 600;
-}
-
-.item-desc {
-  width: 300px;
-}
-
-.menu-container {
-  display: flex;
-  flex-direction: column;
-  color: white;
-}
 
 
 
@@ -395,11 +389,13 @@ textarea {
 .about-right > h1 {
   font-variant: small-caps;
   font-size: 3vw;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .about-right > p {
+  font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; 
   font-size: 1.5vw;
+  
 }
 
 .about-image {
